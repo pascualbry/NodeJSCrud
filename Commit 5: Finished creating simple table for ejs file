@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Product</title>
+</head>
+
+<body>
+<div class="body">
+  <div class="search">
+    <button class="modalb">Add Product</button>
+  </div>
+
+  <table class="js-sort-table" align="center">
+    <thead>
+        <tr>
+          <th>ID No.</th>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Amount</th>
+          <th colspan="2">Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% items.forEach(function(items){ %>
+            <tr>
+                <td><%= items.id %></td>
+                <td><%= items.name %></td>
+                <td><%= items.qty %></td>
+                <td><%= items.amount %></td>
+                <td><a class="view">Update</a></td>
+                <td><a class="view">Delete</a></td>
+            </tr>
+        <% }); %>
+    </tbody>
+  </table>
+
+</div>
+</body>
+</html>
+
+<style>
+
+body, html {
+    background: #4e657a;
+    padding: 0;
+    margin: 0;
+    font-family: 'Helvetica';
+    font-size: 16px;
+    color: white;
+}
+  
+.body {
+  width: 100%;
+  margin-top: 3.5%;
+}
+
+table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+.js-sort-table th {
+  border-top: 4px solid #6d8da6;
+  border-bottom: 4px solid #6d8da6;
+  text-align: center;
+  padding: 8px;
+}
+
+.js-sort-table td {
+  border-bottom: 1px solid #6d8da6;
+  text-align: center;
+  padding: 8px;
+}
+
+.js-sort-table td a {
+  color: white;
+  text-decoration:none;
+  padding: 5px;
+}
+
+.js-sort-table td .view {
+  background-color: #337ab2;
+}
+
+.modalb {
+  background-color: #f5a623;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  color: white;
+  padding: 14px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 5%;
+}
+
+td .view {
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  padding: 2px;
+  font-size: 12px;
+}
+
+</style>
